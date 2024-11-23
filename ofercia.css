@@ -1,0 +1,457 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #212121;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 10px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center; /* Ustawienie nawigacji na środek */
+    align-items: center;
+    padding: 1rem 3rem;
+    background: #2d2d2d;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    position: absolute;
+    left: 30px; /* Logo przesunięte w lewo */
+}
+
+.navbar .logo img {
+    height: 240px;
+    width: 240px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    list-style: none;
+    justify-content: center; /* Wycentrowanie linków */
+    margin-left: -50px; /* Lekko przesunięcie w lewo */
+}
+
+.navbar .nav-links li {
+    margin-left: 2rem;
+}
+
+.navbar .nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    color: #ff6347;
+}
+footer {
+    background: #2d2d2d;
+    padding: 4rem 0;
+    margin-top: auto;
+    text-align: center;
+    color: #aaa;
+}
+
+footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+footer ul li {
+    margin-left: 2rem;
+}
+
+footer ul li a {
+    color: #ff6347;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #fff;
+}
+
+/* Ikony kontaktowe w stopce */
+.contact-icons-footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.contact-icon img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0.8);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.contact-icon:hover img {
+    transform: scale(1.2);
+    filter: brightness(1);
+}
+.offer {
+    padding-top: 120px;
+    text-align: center;
+}
+
+.offer h2 {
+    font-size: 2rem;
+    color: #ff6347;
+}
+
+.offer p {
+    font-size: 1.1rem;
+    color: #ddd;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Slider Section */
+.slider-intro {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #333;
+}
+
+.slider-intro h2 {
+    color: #ff6347;
+    font-size: 2rem;
+}
+.slider-section {
+    margin-top: 40px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;  /* Wyśrodkowanie */
+}
+
+/* Slider Container */
+.slider-container {
+    width: 80%;  /* Slider occupies 80% of the page width */
+    max-width: 800px; /* Maximum width of the slider */
+    height: 450px; /* Adjusted height for the slider */
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    margin-top: 20px;
+}
+
+/* Slider Content */
+.slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: transform 1s ease-in-out;
+}
+
+/* Individual Slide */
+.slide {
+    min-width: 100%;  /* Each slide takes up 100% of the container width */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Slide Image */
+.slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: opacity 1s ease;
+}
+
+/* Dots for navigation */
+.dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10; /* Make sure dots are on top */
+}
+
+/* Individual Dot */
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.6;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Dot Hover Effect */
+.dot:hover {
+    background-color: #ff6347;
+    opacity: 1;
+}
+
+/* Active Dot */
+.dot.active {
+    background-color: #ff6347;
+    opacity: 1;
+}
+
+.footer {
+    background: #2d2d2d;
+    padding: 4rem 1rem;
+    text-align: center;
+    color: #aaa;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin-bottom: 1rem;
+}
+
+.footer ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.footer ul li {
+    margin-left: 2rem;
+}
+
+.footer ul li a {
+    color: #ff6347;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #fff;
+}
+
+.contact-details {
+    text-align: left;
+    padding: 1.5rem;
+    background: linear-gradient(145deg, #333, #444);
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    max-width: 600px; /* Ograniczenie szerokości */
+    color: #fff;
+}
+
+.contact-details h2 {
+    font-size: 1.8rem;
+    color: #ff6347;
+    text-align: center;
+}
+
+.contact-details .details p {
+
+    font-size: 1rem;
+}
+
+.contact-details .details a {
+    color: #ff6347;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-details .details a:hover {
+    color: #fff;
+}
+/* Stylowanie dla sekcji z usługami */
+.services {
+    padding-top: 120px; 
+    text-align: center; 
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.service {
+    text-align: center;
+    max-width: 200px; 
+    margin: 20px;
+}
+
+.service img {
+    width: 50px;
+    height: 50px; 
+    margin-bottom: 10px; 
+}
+
+.service h3 {
+    font-size: 1.1rem;
+    color: #ff6347; 
+    margin-top: 10px;
+}
+
+.service p {
+    font-size: 1rem;
+    color: #ddd; 
+}
+/* Propozycje domów */
+.home-offers {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #333, #444);
+    color: #fff;
+}
+
+.home-offers h2 {
+    font-size: 2.5rem;
+    color: #ff6347;
+    margin-bottom: 40px;
+}
+
+.offers-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.offer-card {
+    background: #2d2d2d;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.offer-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.offer-card h3 {
+    font-size: 1.8rem;
+    color: #ff6347;
+    margin-bottom: 10px;
+}
+
+.offer-card .price {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 5px 0;
+    color: #fff;
+}
+
+.contact-info a {
+    color: #ff6347;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Efekty ujawniania */
+.reveal {
+    opacity: 0;
+    transform: translateX(-50px); 
+    transition: all 1s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateX(0); 
+}
+
+
+
+/* Responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .slider-container {
+        width: 90%;
+        height: 300px; 
+    }
+        .navbar {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    
+        .navbar .nav-links {
+            flex-direction: column;
+            margin-top: 1rem;
+        }
+    
+        .navbar .nav-links li {
+            margin-left: 0;
+            margin-bottom: 1rem;
+        }
+    
+        footer ul {
+            flex-direction: column;
+        }
+    
+        footer ul li {
+            margin-left: 0;
+            margin-bottom: 1rem;
+        }
+    
+}
